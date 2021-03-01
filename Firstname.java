@@ -4,27 +4,30 @@ import java.util.regex.Pattern;
 public class Firstname {
 	
 	static   Scanner name = new  Scanner (System.in); 
-	
+				
 		
-	static void firstname() {
+	static void lastname() {
 		
-	String Firstname = name.nextLine();
+	String Lastname = name.nextLine();
 	
 	// validate first name
-	  	boolean  user= Pattern.matches( "^[A-Z]{1}[a-z]{2}$",Firstname );
+	  	boolean  user= Pattern.matches( "^[A-Z]{1}[a-z]{2}$",Lastname );
+	
 	if (user == true ) {
-		System.out.println("you entered a valid first name  :" +Firstname);
+		System.out.println("you entered a valid last name  :" +Lastname);
 	}else { System.out.println ("not a valid name");
 			System.out.println("Enter valid name");
-			firstname();
+			lastname();
 	}
 	
-}
+	}
 	
 	
    public static void main( String[] args ) {
-	   System.out.println("enter first name");
-	   firstname();
+	   System.out.println("enter last name");
+	   lastname();
 
 }
 }
+
+   
