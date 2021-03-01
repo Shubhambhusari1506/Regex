@@ -6,32 +6,26 @@ public class Firstname {
 	static   Scanner name = new  Scanner (System.in); 
 				
 		
-	static void email() {
+	static void MobNumber() {
 		
-	String mail = name.nextLine();
+	String mobilenumber = name.nextLine();
 	
-	// validate email id
-	  	boolean  user= Pattern.matches( "^[_A-Za-z0-9-\\+]+(\\.[A-Za-z0-9-]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$",mail );
+	// validate first name
+	  	boolean  user= Pattern.matches("^[0-9]{2}[ ][6-9]{1}[0-9]{9}$",mobilenumber );
 	
 	if (user == true ) {
-	
-	System.out.println("you entered a valid email  :" +mail);
-	
-	}else { System.out.println ("Not a valid email");
-	
-	System.out.println("Enter valid email");
-
-	email();
+		System.out.println("you entered a valid mobile number  :" +mobilenumber);
+	}else { System.out.println ("Not a valid mobile number");
+			System.out.println("Enter valid mobile number");
+			MobNumber();
 	}
 	
 	}
 	
 	
    public static void main( String[] args ) {
-
-	 System.out.println("enter email ID");
-	 
-	 email();
+	   System.out.println("enter mobile number");
+	   MobNumber();
 
 }
 }
