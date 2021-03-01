@@ -6,26 +6,32 @@ public class Firstname {
 	static   Scanner name = new  Scanner (System.in); 
 				
 		
-	static void lastname() {
+	static void email() {
 		
-	String Lastname = name.nextLine();
+	String mail = name.nextLine();
 	
-	// validate first name
-	  	boolean  user= Pattern.matches( "^[A-Z]{1}[a-z]{2}$",Lastname );
+	// validate email id
+	  	boolean  user= Pattern.matches( "^[_A-Za-z0-9-\\+]+(\\.[A-Za-z0-9-]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$",mail );
 	
 	if (user == true ) {
-		System.out.println("you entered a valid last name  :" +Lastname);
-	}else { System.out.println ("not a valid name");
-			System.out.println("Enter valid name");
-			lastname();
+	
+	System.out.println("you entered a valid email  :" +mail);
+	
+	}else { System.out.println ("Not a valid email");
+	
+	System.out.println("Enter valid email");
+
+	email();
 	}
 	
 	}
 	
 	
    public static void main( String[] args ) {
-	   System.out.println("enter last name");
-	   lastname();
+
+	 System.out.println("enter email ID");
+	 
+	 email();
 
 }
 }
