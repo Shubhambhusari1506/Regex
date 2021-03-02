@@ -6,26 +6,27 @@ public class Firstname {
 	static   Scanner name = new  Scanner (System.in); 
 				
 		
-	static void Pass() {
+	static void Mail() {
 		
-	String password = name.nextLine();
+	String email = name.nextLine();
 	
 	// validate password
-	  	boolean  user= Pattern.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=[^$@!#%*?&]*[$#@!%*?&][^$@!#%*?&]*$).{8,}$",password);
+	
+	  	boolean  user= Pattern.matches("^[A-Za-z0-9+-]+(\\\\.[A-Za-z0-9-]+)*@\" + \"[A-Za-z0-9-]+(\\\\.[A-Za-z0-9]+)*(\\\\.[A-Za-z]{2,})$",email);
 	
 	if (user == true ) {
-		System.out.println("you entered a valid password  :" +password);
-	}else { System.out.println ("Not a valid password");
-			System.out.println("Enter valid password");
-			Pass();
+		System.out.println("you entered a valid email  :" +email);
+	}else { System.out.println ("Not a valid email");
+			System.out.println("Enter valid email");
+			Mail();
 	}
 	
 	}
 	
 	
    public static void main( String[] args ) {
-	   System.out.println("enter password using letters, numbers, and atleast one special chracter");
-	   Pass();
+	   System.out.println("enter  email id");
+	   Mail();
 
 }
 }
