@@ -11,7 +11,7 @@ public class Firstname {
 	String password = name.nextLine();
 	
 	// validate password
-	  	boolean  user= Pattern.matches("(?=.*?[A-Z]).{1,}(?=.*?[a-z]).{7,}(?=.*?[0-9]).{1,}$",password);
+	  	boolean  user= Pattern.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=[^$@!#%*?&]*[$#@!%*?&][^$@!#%*?&]*$).{8,}$",password);
 	
 	if (user == true ) {
 		System.out.println("you entered a valid password  :" +password);
@@ -24,7 +24,7 @@ public class Firstname {
 	
 	
    public static void main( String[] args ) {
-	   System.out.println("enter password of eight characters with having atleast one upper case & number");
+	   System.out.println("enter password using letters, numbers, and atleast one special chracter");
 	   Pass();
 
 }
